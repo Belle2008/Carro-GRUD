@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.containerPrincipal {
+    display: block;
+    height: 46px;
+    width: 100%;
+    padding-top: 80px;
+    background-color: rgb(33, 30, 30);
+}
+
+.menuPrincipal {
+        background-color: rgb(42, 42, 44);
+        overflow: auto;
+        white-space: nowrap;
+        float: left;
+        width: 100%;
+}
+
+.menuPrincipal a{
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+}
+
+.menuPrincipal a:hover{
+background-color:rgb(13, 13, 14);
+}
