@@ -3,29 +3,140 @@
     padding: 0;
 }
 .containerPrincipal {
-    display: block;
-    height: 46px;
+    display: flex;
+    align-items: center;
+    height: 300px;
     width: 100%;
     padding-top: 80px;
     background-color: rgb(33, 30, 30);
 }
+.imagem_header{
+    width: 750px;
+    height: 380px;
+    margin-top: -80px;
+}
+
+.texto-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 550px;
+    margin-left: 30px;
+}
+
+.texto-container h1{
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 40px;
+    text-align: center;
+    padding-bottom: 10px;
+} 
+
+.texto-container p{
+    font-size: 20px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    color: white;
+    margin-bottom: 100px;
+    text-align: center;
+    line-height: 1.7;
+}
+
 
 .menuPrincipal {
         background-color: rgb(42, 42, 44);
-        overflow: auto;
         white-space: nowrap;
         float: left;
         width: 100%;
+        
+        
 }
 
 .menuPrincipal a{
     display: inline-block;
     color: white;
-    text-align: center;
     padding: 14px;
     text-decoration: none;
+    font-size: 20px;
+    text-align: center;
 }
 
 .menuPrincipal a:hover{
 background-color:rgb(13, 13, 14);
+}
+
+#tabela{
+    width: 100%;
+    border-collapse: collapse;
+   margin-top: 20px;
+}
+th, td {
+    padding: 12px 15px;
+    border-bottom: 1px;
+    text-align: center;
+    background-color: rgb(42, 42, 44);
+    color: white;
+}
+
+th:hover{
+    background-color:rgb(13, 13, 14);
+}
+
+.exemplo td{
+    padding: 12px 15px;
+    border-bottom: 1px;
+    text-align: center;
+    background-color: white;
+    color: black;
+}
+
+.btn{
+padding: 6px 12px;
+border: none;
+border-radius: 5px;
+color: white;
+cursor: pointer;
+text-decoration: none;
+font-size: 14px;
+}
+
+.btn-edit{
+    background-color: green;
+}
+.btn-delete{
+    background-color: red;
+}
+
+.btn-add{
+    background-color: green;
+   margin-top: 20px;
+}
+
+.Quadrado{
+    padding: 2rem;
+    display: block;
+}
+
+.login-form{
+    background-color: white;
+    padding: 1rem;
+    border-radius: 5px;
+    max-width: 400px;
+    margin: auto;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    margin-top: 20px;
+}
+input, textarea{
+display: block;
+width: 95%;
+margin: 0.5rem 0;
+padding: 0.5rem;
+}
+textarea{
+    height: 150px;
+}
+button,select{
+    display: block;
+    width: 100%;
+    margin: 0.5rem 0;
+    padding: 0.5rem;
 }
