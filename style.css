@@ -46,9 +46,7 @@
         background-color: rgb(42, 42, 44);
         white-space: nowrap;
         float: left;
-        width: 100%;
-        
-        
+        width: 100%;       
 }
 
 .menuPrincipal a{
@@ -65,9 +63,9 @@ background-color:rgb(13, 13, 14);
 }
 
 #tabela{
-    width: 100%;
+  width: 100%;
     border-collapse: collapse;
-   margin-top: 20px;
+    margin-top: 30px;
 }
 th, td {
     padding: 12px 15px;
@@ -106,14 +104,21 @@ font-size: 14px;
     background-color: red;
 }
 
-.btn-add{
+.btn.btn-add{
     background-color: green;
-   margin-top: 20px;
+    padding: 10px 30px;
+    font-size: 15px;
 }
 
 .Quadrado{
     padding: 2rem;
     display: block;
+}
+.container{
+    margin-top: 15px;
+    display: block;
+    float: left;
+    width: 100%;
 }
 
 .login-form{
@@ -121,9 +126,11 @@ font-size: 14px;
     padding: 1rem;
     border-radius: 5px;
     max-width: 400px;
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
     box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-    margin-top: 20px;
+    margin-top: 50px;
+    
 }
 input, textarea{
 display: block;

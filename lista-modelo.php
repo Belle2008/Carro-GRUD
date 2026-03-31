@@ -1,5 +1,6 @@
 <?php 
 include_once './include/index.php';
+include_once './include/conexao.php';
 ?>
 
 <main>
