@@ -16,16 +16,29 @@ include_once './include/conexao.php';
                 <th>Tipo De Carro</th>
                 <th>Ações</th>
             </tr> 
-            <thead class= "exemplo">
-            <tr>
-                <td>1</td>
-                <td>1</td>
-                <td>Classe E</td>
-                <td>Sedan de luxo</td>
-                <td>
-                    <a href="salvar-modelos.php?id=" class="btn btn-edit">Editar</a>
-                    <a href="" class="btn btn-delete">Excluir</a>
-                </td>
-            </tr> 
             <thead>
+            <tbody>
+                <?php
+                $sql = 'SELECT * FROM modelos';
+                $resultado = mysqli_query($conexao, $sql);
+
+                while ($dados = mysqli_fetch_assoc($resultado)) {
+                ?>  
+                <tr class="coluna">
+
+                <td><?php echo $dados['ModeloID'];?></td>
+                <td><?php echo $dados['MarcaID'];?></td>
+                <td><?php echo $dados['Nome'];?></td>
+                <td><?php echo $dados['TipoDeCarro'];?></td>
+                <td>
+                  <a href="salvar-carros.php?id=" class="btn btn-edit">Editar</a>
+                  <a href="./action/Modelo.php?acao=excluir&id=<?php echo $dados['ModeloID'];?>" class="btn btn-delete">Excluir</a>
+                </td>
+                </tr>
+                <?php
+                }
+                ?>
+            </tbody>
+    <table>
     </div>
+<main>

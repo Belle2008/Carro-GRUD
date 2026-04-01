@@ -25,9 +25,9 @@ include_once './include/index.php';
                 $sql = 'SELECT * FROM carros';
                 $resultado = mysqli_query($conexao, $sql);
 
-                while ($dados = mysql_fetch_assoc($resultado)) {
+                while ($dados = mysqli_fetch_assoc($resultado)) {
                 ?>  
-                <tr>
+                <tr class="coluna">
 
                 <td><?php echo $dados['CarroID'];?></td>
                 <td><?php echo $dados['ModeloID'];?></td>
@@ -37,7 +37,7 @@ include_once './include/index.php';
                 <td><?php echo $dados['Descrição'];?></td>
                 <td>
                   <a href="salvar-carros.php?id=" class="btn btn-edit">Editar</a>
-                  <a href="" class="btn btn-delete">Excluir</a>
+                  <a href="./action/Carro.php?acao=excluir&id=<?php echo $dados['CarroID'];?>" class="btn btn-delete">Excluir</a>
                 </td>
                 </tr>
                 <?php

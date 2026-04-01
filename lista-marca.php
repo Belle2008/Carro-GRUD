@@ -16,14 +16,27 @@ include_once './include/index.php';
             
             </tr> 
             <thead>
-            <thead class= "exemplo">
-            <tr>
-                <td>1</td>
-                <td>Mercedes-Benz</td>
+            <tbody>
+                <?php
+                $sql = 'SELECT * FROM marcas';
+                $resultado = mysqli_query($conexao, $sql);
+
+                while ($dados = mysqli_fetch_assoc($resultado)) {
+                ?>  
+                <tr class="coluna">
+
+                <td><?php echo $dados['MarcaID'];?></td>
+                <td><?php echo $dados['Nome'];?></td>
+             
                 <td>
-                    <a href="salvar-marcas.php?id=" class="btn btn-edit">Editar</a>
-                    <a href="" class="btn btn-delete">Excluir</a>
+                  <a href="salvar-marcas.php?id=" class="btn btn-edit">Editar</a>
+                  <a href="./action/Marca.php?acao=excluir&id=<?php echo $dados['MarcaID'];?>" class="btn btn-delete">Excluir</a>
                 </td>
-            </tr> 
-            <thead> 
+                </tr>
+                <?php
+                }
+                ?>
+            </tbody>
+    <table>
     </div>
+<main>
