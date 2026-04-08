@@ -36,7 +36,7 @@ include_once './include/index.php';
                 <td><?php echo $dados['Placa'];?></td>
                 <td><?php echo $dados['Descrição'];?></td>
                 <td>
-                  <a href="salvar-carros.php?id=" class="btn btn-edit">Editar</a>
+                  <a href="salvar-carro.php?id= <?php echo $dados['CargoID'];?>" class="btn btn-edit">Editar</a>
                   <a href="./action/Carro.php?acao=excluir&id=<?php echo $dados['CarroID'];?>" class="btn btn-delete">Excluir</a>
                 </td>
                 </tr>
