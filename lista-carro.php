@@ -34,9 +34,9 @@ include_once './include/index.php';
                 <td><?php echo $dados['Preco'];?></td>
                 <td><?php echo $dados['Cor'];?></td>
                 <td><?php echo $dados['Placa'];?></td>
-                <td><?php echo $dados['Descrição'];?></td>
+                <td><?php echo $dados['Descricao'];?></td>
                 <td>
-                  <a href="salvar-carro.php?id= <?php echo $dados['CargoID'];?>" class="btn btn-edit">Editar</a>
+                  <a href="salvar-carro.php?id=<?php echo $dados['CarroID'];?>" class="btn btn-edit">Editar</a>
                   <a href="./action/Carro.php?acao=excluir&id=<?php echo $dados['CarroID'];?>" class="btn btn-delete">Excluir</a>
                 </td>
                 </tr>
