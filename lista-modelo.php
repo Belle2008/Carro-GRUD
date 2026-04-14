@@ -6,7 +6,7 @@ include_once './include/conexao.php';
 <main>
     <div class= "container">
        
-        <a href="./salvar-modelos.php"  class= "btn btn-add">Incluir</a>
+        <a href="./salvar-modelo.php"  class= "btn btn-add">Incluir</a>
     <table id="tabela">
         <thead>
             <tr>
@@ -31,7 +31,7 @@ include_once './include/conexao.php';
                 <td><?php echo $dados['Nome'];?></td>
                 <td><?php echo $dados['TipoDeCarro'];?></td>
                 <td>
-                  <a href="salvar-carros.php?id=" class="btn btn-edit">Editar</a>
+                  <a href="Salvar-modelo.php?id=<?php echo $dados['ModeloID'];?>" class="btn btn-edit">Editar</a>
                   <a href="./action/Modelo.php?acao=excluir&id=<?php echo $dados['ModeloID'];?>" class="btn btn-delete">Excluir</a>
                 </td>
                 </tr>

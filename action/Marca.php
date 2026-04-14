@@ -11,6 +11,32 @@ switch($acao) {
         //executar o SQL
         $resultado = mysqli_query($conexao, $sql);
         header("Location:../lista-marca.php");
-}
+        break;
 
+    case 'salvar':
+    $Nome = $_POST['Nome'];
+
+    if (empty($id)) {
+        // INSERT
+        $sql = "INSERT INTO Marcas (Nome) 
+                VALUES ('{$Nome}')";
+    } else {
+        // UPDATE
+        $sql = "UPDATE Marcas 
+                   SET Nome = '{$Nome}' 
+                 WHERE MarcaID = $id";
+    }
+    mysqli_query($conexao, $sql);
+    header("Location: ../lista-marca.php");
+    break;
+
+default:
+    # code...
+    break;
+}
 ?>
+
+
+
+
+

@@ -1,4 +1,5 @@
 <?php 
+include_once './include/index.php';
 include_once './include/conexao.php';
 ?>
   <main>
@@ -39,7 +40,6 @@ if( isset($_GET['id'])){
       <input type="text" placeholder="Cor" name="Cor" value="<?php echo $Cor?>">
       <input type="text" placeholder="Placa" name="Placa" value="<?php echo $Placa?>">
       <textarea name="Descricao" placeholder="Descrição"><?php echo $Descricao; ?></textarea>
-      <button type="submit">Salvar</button>
 
       <?php
         $sql = 'SELECT * FROM modelos;';
@@ -57,6 +57,7 @@ if( isset($_GET['id'])){
             }
             ?>
         </select>
+        <button type="submit">Salvar</button>
     </form>
   </div>
   </main>

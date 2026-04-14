@@ -7,7 +7,7 @@ include_once './include/index.php';
 <main>
     <div class= "container">
        
-        <a href="./salvar-carros.php"  class= "btn btn-add">Incluir</a>
+        <a href="./salvar-carro.php"  class= "btn btn-add">Incluir</a>
     <table id="tabela">
         <thead>
             <tr>
@@ -36,7 +36,7 @@ include_once './include/index.php';
                 <td><?php echo $dados['Placa'];?></td>
                 <td><?php echo $dados['Descricao'];?></td>
                 <td>
-                  <a href="salvar-carro.php?id=<?php echo $dados['CarroID'];?>" class="btn btn-edit">Editar</a>
+                  <a href="Salvar-carro.php?id=<?php echo $dados['CarroID'];?>" class="btn btn-edit">Editar</a>
                   <a href="./action/Carro.php?acao=excluir&id=<?php echo $dados['CarroID'];?>" class="btn btn-delete">Excluir</a>
                 </td>
                 </tr>
